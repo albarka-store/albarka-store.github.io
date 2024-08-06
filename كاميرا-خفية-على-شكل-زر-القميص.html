@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+ <head>
+  <title>
+   نموذج البحث
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" rel="stylesheet"/>
+  <style>
+   html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, textarea, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      @media (min-width: 1024px) {
+      body {
+     display: flex;
+     justify-content: center;}
+     .testbox {
+      width: 60%;}}
+      .item > p {
+  margin-bottom: 10px;
+}
+
+      h1 {
+      position: absolute;
+      margin: 0;
+      font-size: 32px;
+      color: #fff;
+      z-index: 2;
+      }
+      h5 {
+      margin: 10px 0;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 0 0 20px 0 #095484; 
+      }
+      .banner {
+      position: relative;
+      height: 28vh;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+      .banner::after {
+      content: "";
+      background-color: rgba(199, 248, 221, 0); 
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      select {
+      width: 100%;
+      padding: 7px 0;
+      background: transparent;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder, a {
+      color: #030569;
+      }
+      .item input:hover, .item select:hover, .item textarea:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 6px 0 #030569;
+      color: #030569;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      }
+      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      font-size: 20px;
+      color: #a9a9a9;
+      }
+      .item i {
+      right: 2%;
+      top: 30px;
+      z-index: 1;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+      right: 1%;
+      z-index: 2;
+      opacity: 0;
+      cursor: pointer;
+      }
+      input[type=radio], input[type=checkbox]  {
+      display: none;
+      }
+      label.radio, label.check {
+      position: relative;
+      display: inline-block;
+      margin: 5px 20px 15px 0;
+      cursor: pointer;
+      }
+      .question span {
+      margin-left: 30px;
+      }
+      span.required {
+      margin-left: 0;
+      color: red;
+      }
+      .checkbox-item label {
+      margin: 5px 0px 10px 0;
+      }
+      label.radio:before, label.check:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      }
+      label.radio:before {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 2px solid #030569;
+      }
+      label.check:before {
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      border: 1px solid #030569;
+      }
+      input[type=checkbox]:checked + .check:before {
+      background: #030569;
+      }
+      label.radio:after {
+      right: 5px;
+      border: 3px solid #095484;
+      }
+      label.check:after {
+      right: 4px;
+      border: 3px solid #fff;
+      }
+      label.radio:after, label.check:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      width: 8px;
+      height: 4px;
+      background: transparent;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after, input[type=checkbox]:checked + label:after {
+      opacity: 1;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background: #0666a3;
+      }
+      @media (min-width: 568px) {
+      .city-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .city-item input {
+      width: calc(50% - 20px);
+      }
+      .city-item select {
+      width: calc(50% - 8px);
+      }
+      }
+
+    /**input, textarea{max-width: 320px;}**/
+    /* Apply nature-inspired styles to the form container */
+.container {
+  background: linear-gradient(135deg, #e0e0f2d7, #ffffff); /* Gradient background */
+  background-position: center;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: Arial, sans-serif; /* Choose a nature-friendly font */
+}
+
+/* Style the input fields */
+/*.check{font-weight: bold;}*/
+h2{ color:#030569;}
+input[type="text"],
+textarea,
+select {
+  background: rgba(255, 255, 255, 0.8); /* Light background */
+  border: 1px solid #030569;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: inherit;
+  color: #333;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+  background: #383eae; /* Green color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #292fa6; /* Darker green on hover */
+}
+
+/* Additional styling for other elements (e.g., checkboxes) */
+/* Customize as needed */
+
+/* Add more styles for your specific elements */
+
+/* Optional: Add a subtle box shadow for depth */
+.container {
+  box-shadow: 0 6px 20px rgba(14, 13, 13, 0.312);
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* White with 50% opacity */
+    z-index: -1; /* Place it behind the content */
+}
+  </style>
+ </head>
+ <body style="background-image: url('images/bannerblue.jpg'); backdrop-filter: blur(25px);">
+  <div class="testbox">
+   <form action="/" class="container">
+    <div class="banner" style="background-image: url('images/bannerblue.jpg');">
+    </div>
+    <h2>
+     كاميرا خفية على شكل زر القميص
+    </h2>
+    <div class="itemx" data-price="125" data-shipping="25">
+     <p>
+      <strong>
+       سعر القطعة:
+      </strong>
+      125 ريال  |
+      <strong>
+       سعر الشحن:
+      </strong>
+      25 ريال
+      <strong>
+       |   الدفع عند الاستلام
+      </strong>
+     </p>
+     <p>
+      <br/>
+      يرجى إدخال البيانات المطلوبة.
+     </p>
+    </div>
+    <span style="margin-bottom: 50%;">
+    </span>
+    <div class="item">
+     <p>
+      <strong>
+       الاسم الكامل
+      </strong>
+      <span class="required">
+       *
+      </span>
+     </p>
+     <input id="nameinput" name="name" required="" type="text"/>
+    </div>
+    <div class="item">
+     <p>
+      <strong>
+       الكمية المطلوبة
+      </strong>
+     </p>
+     <select style="max-width: 170px;">
+      <option value="1">
+       1
+      </option>
+      <option value="2">
+       2
+      </option>
+      <option value="3">
+       3
+      </option>
+      <option value="4">
+       4
+      </option>
+      <option value="5">
+       5
+      </option>
+      <option value="6">
+       6
+      </option>
+      <option value="7">
+       7
+      </option>
+      <option value="8">
+       8
+      </option>
+      <option value="9">
+       9
+      </option>
+      <option value="10">
+       10
+      </option>
+     </select>
+    </div>
+    <div class="item">
+     <p>
+      <strong>
+       عنوان الشحن
+      </strong>
+      <span class="required">
+       *
+      </span>
+     </p>
+     <textarea id="addressinput" name="name" placeholder="العنوان" required="" rows="2" type="text"></textarea>
+     <div class="city-item">
+      <input id="cityinput" name="name" placeholder="المدينة" required="" type="text"/>
+      <select>
+       <option value="1">
+        السعودية
+       </option>
+      </select>
+     </div>
+    </div>
+    <div class="item">
+     <p>
+      <strong>
+       الهاتف
+      </strong>
+      <span class="required">
+       *
+      </span>
+     </p>
+     <input id="phoneinput" name="name" required="" type="text"/>
+    </div>
+    <div class="item">
+     <p>
+      <strong>
+       البريد الإلكتروني
+      </strong>
+     </p>
+     <input id="emailinput" name="name" type="text"/>
+    </div>
+    <div class="question">
+     <p style="font-size: 110%;">
+      <strong>
+       أضف منتجات أخرى
+      </strong>
+      (اختياري)
+     </p>
+     <p style="font-size: 90%;">
+      احصل على خصم 10% على السعر الإجمالي عند الشراء مع أحد هذه المنتجات.
+      <br/>
+     </p>
+     <br/>
+     <div class="question-answer checkbox-item">
+      <div style="display: none;">
+       <input data-id="check_مروحة مكتب محمولة" id="check_1" name="checklist" type="checkbox" value="none"/>
+       <label class="check" data-price="89" for="check_1">
+        <span>
+        </span>
+        <span>
+         مروحة مكتب محمولة - 89 ريال للقطعة
+        </span>
+       </label>
+       <br/>
+       <label for="quantity1">
+        الكمية
+       </label>
+       <select id="quantity1" name="quantity1" style="max-width: 60px;">
+        <option value="1">
+         1
+        </option>
+        <option value="2">
+         2
+        </option>
+        <option value="3">
+         3
+        </option>
+        <option value="4">
+         4
+        </option>
+        <option value="5">
+         5
+        </option>
+        <option value="6">
+         6
+        </option>
+        <option value="7">
+         7
+        </option>
+        <option value="8">
+         8
+        </option>
+        <option value="9">
+         9
+        </option>
+        <option value="10">
+         10
+        </option>
+       </select>
+      </div>
+      <div style="display: none;">
+       <input data-id="check_غالق الابواب السحري" id="check_2" name="checklist" type="checkbox" value="none"/>
+       <label class="check" data-price="65" for="check_2">
+        <span>
+        </span>
+        <span>
+         غالق الابواب السحري - 65 ريال للقطعة
+        </span>
+       </label>
+       <br/>
+       <label for="quantity2">
+        الكمية
+       </label>
+       <select id="quantity2" name="quantity2" style="max-width: 60px;">
+        <option value="1">
+         1
+        </option>
+        <option value="2">
+         2
+        </option>
+        <option value="3">
+         3
+        </option>
+        <option value="4">
+         4
+        </option>
+        <option value="5">
+         5
+        </option>
+        <option value="6">
+         6
+        </option>
+        <option value="7">
+         7
+        </option>
+        <option value="8">
+         8
+        </option>
+        <option value="9">
+         9
+        </option>
+        <option value="10">
+         10
+        </option>
+       </select>
+      </div>
+      <div style="display: none;">
+       <input data-id="check_معطر هواء للسيارة" id="check_3" name="checklist" type="checkbox" value="none"/>
+       <label class="check" data-price="87" for="check_3">
+        <span>
+        </span>
+        <span>
+         معطر هواء للسيارة - 87 ريال للقطعة
+        </span>
+       </label>
+       <br/>
+       <label for="quantity3">
+        الكمية
+       </label>
+       <select id="quantity3" name="quantity3" style="max-width: 60px;">
+        <option value="1">
+         1
+        </option>
+        <option value="2">
+         2
+        </option>
+        <option value="3">
+         3
+        </option>
+        <option value="4">
+         4
+        </option>
+        <option value="5">
+         5
+        </option>
+        <option value="6">
+         6
+        </option>
+        <option value="7">
+         7
+        </option>
+        <option value="8">
+         8
+        </option>
+        <option value="9">
+         9
+        </option>
+        <option value="10">
+         10
+        </option>
+       </select>
+      </div>
+      <div style="display: none;">
+       <label class="check" data-price="125" for="check_4">
+        <span>
+        </span>
+        <span>
+         كاميرا خفية على شكل زر القميص - 125 ريال للقطعة
+        </span>
+       </label>
+       <br/>
+       <label for="quantity4">
+        الكمية
+       </label>
+       <select id="quantity4" name="quantity4" style="max-width: 60px;">
+        <option value="1">
+         1
+        </option>
+        <option value="2">
+         2
+        </option>
+        <option value="3">
+         3
+        </option>
+        <option value="4">
+         4
+        </option>
+        <option value="5">
+         5
+        </option>
+        <option value="6">
+         6
+        </option>
+        <option value="7">
+         7
+        </option>
+        <option value="8">
+         8
+        </option>
+        <option value="9">
+         9
+        </option>
+        <option value="10">
+         10
+        </option>
+       </select>
+      </div>
+      <div style="display: none;">
+       <input data-id="check_شاحن لاسلكي 6 في 1" id="check_5" name="checklist" type="checkbox" value="none"/>
+       <label class="check" data-price="99" for="check_5">
+        <span>
+        </span>
+        <span>
+         شاحن لاسلكي 6 في 1 - 99 ريال للقطعة
+        </span>
+       </label>
+       <br/>
+       <label for="quantity5">
+        الكمية
+       </label>
+       <select id="quantity5" name="quantity5" style="max-width: 60px;">
+        <option value="1">
+         1
+        </option>
+        <option value="2">
+         2
+        </option>
+        <option value="3">
+         3
+        </option>
+        <option value="4">
+         4
+        </option>
+        <option value="5">
+         5
+        </option>
+        <option value="6">
+         6
+        </option>
+        <option value="7">
+         7
+        </option>
+        <option value="8">
+         8
+        </option>
+        <option value="9">
+         9
+        </option>
+        <option value="10">
+         10
+        </option>
+       </select>
+      </div>
+      <div style="display: none;">
+       <input data-id="check_حامل هاتف سيارة مغناطيسي" id="check_6" name="checklist" type="checkbox" value="none"/>
+       <label class="check" data-price="65" for="check_6">
+        <span>
+        </span>
+        <span>
+         حامل هاتف سيارة مغناطيسي - 65 ريال للقطعة
+        </span>
+       </label>
+       <br/>
+       <label for="quantity6">
+        الكمية
+       </label>
+       <select id="quantity6" name="quantity6" style="max-width: 60px;">
+        <option value="1">
+         1
+        </option>
+        <option value="2">
+         2
+        </option>
+        <option value="3">
+         3
+        </option>
+        <option value="4">
+         4
+        </option>
+        <option value="5">
+         5
+        </option>
+        <option value="6">
+         6
+        </option>
+        <option value="7">
+         7
+        </option>
+        <option value="8">
+         8
+        </option>
+        <option value="9">
+         9
+        </option>
+        <option value="10">
+         10
+        </option>
+       </select>
+      </div>
+      <div style="display: none;">
+       <input data-id="check_مدلك الرقبة والكتف" id="check_7" name="checklist" type="checkbox" value="none"/>
+       <label class="check" data-price="160" for="check_7">
+        <span>
+        </span>
+        <span>
+         مدلك الرقبة والكتف - 160 ريال للقطعة
+        </span>
+       </label>
+       <br/>
+       <label for="quantity7">
+        الكمية
+       </label>
+       <select id="quantity7" name="quantity7" style="max-width: 60px;">
+        <option value="1">
+         1
+        </option>
+        <option value="2">
+         2
+        </option>
+        <option value="3">
+         3
+        </option>
+        <option value="4">
+         4
+        </option>
+        <option value="5">
+         5
+        </option>
+        <option value="6">
+         6
+        </option>
+        <option value="7">
+         7
+        </option>
+        <option value="8">
+         8
+        </option>
+        <option value="9">
+         9
+        </option>
+        <option value="10">
+         10
+        </option>
+       </select>
+      </div>
+      <div style="display: none;">
+       <input data-id="check_مدلك حمام القدمين" id="check_8" name="checklist" type="checkbox" value="none"/>
+       <label class="check" data-price="199" for="check_8">
+        <span>
+        </span>
+        <span>
+         مدلك حمام القدمين - 199 ريال للقطعة
+        </span>
+       </label>
+       <br/>
+       <label for="quantity8">
+        الكمية
+       </label>
+       <select id="quantity8" name="quantity8" style="max-width: 60px;">
+        <option value="1">
+         1
+        </option>
+        <option value="2">
+         2
+        </option>
+        <option value="3">
+         3
+        </option>
+        <option value="4">
+         4
+        </option>
+        <option value="5">
+         5
+        </option>
+        <option value="6">
+         6
+        </option>
+        <option value="7">
+         7
+        </option>
+        <option value="8">
+         8
+        </option>
+        <option value="9">
+         9
+        </option>
+        <option value="10">
+         10
+        </option>
+       </select>
+      </div>
+      <div style="display: none;">
+       <input data-id="check_صاعق حشرات كهربائي" id="check_9" name="checklist" type="checkbox" value="none"/>
+       <label class="check" data-price="85" for="check_9">
+        <span>
+        </span>
+        <span>
+         صاعق حشرات كهربائي - 85 ريال للقطعة
+        </span>
+       </label>
+       <br/>
+       <label for="quantity9">
+        الكمية
+       </label>
+       <select id="quantity9" name="quantity9" style="max-width: 60px;">
+        <option value="1">
+         1
+        </option>
+        <option value="2">
+         2
+        </option>
+        <option value="3">
+         3
+        </option>
+        <option value="4">
+         4
+        </option>
+        <option value="5">
+         5
+        </option>
+        <option value="6">
+         6
+        </option>
+        <option value="7">
+         7
+        </option>
+        <option value="8">
+         8
+        </option>
+        <option value="9">
+         9
+        </option>
+        <option value="10">
+         10
+        </option>
+       </select>
+      </div>
+      <div style="display: none;">
+       <input data-id="check_حافظة المشروبات المحمولة" id="check_10" name="checklist" type="checkbox" value="none"/>
+       <label class="check" data-price="150" for="check_10">
+        <span>
+        </span>
+        <span>
+         حافظة المشروبات المحمولة - 150 ريال للقطعة
+        </span>
+       </label>
+       <br/>
+       <label for="quantity10">
+        الكمية
+       </label>
+       <select id="quantity10" name="quantity10" style="max-width: 60px;">
+        <option value="1">
+         1
+        </option>
+        <option value="2">
+         2
+        </option>
+        <option value="3">
+         3
+        </option>
+        <option value="4">
+         4
+        </option>
+        <option value="5">
+         5
+        </option>
+        <option value="6">
+         6
+        </option>
+        <option value="7">
+         7
+        </option>
+        <option value="8">
+         8
+        </option>
+        <option value="9">
+         9
+        </option>
+        <option value="10">
+         10
+        </option>
+       </select>
+      </div>
+      <br/>
+      <a onclick="displayElements()" style="text-decoration: underline; background-color: #ffffff00; color: #110552; border-color: #110552 !important; font-weight: bold; cursor: pointer;">
+       أظهر المزيد
+      </a>
+     </div>
+    </div>
+    <br>
+     <div class="item">
+      <p>
+       <strong>
+        تعليق
+       </strong>
+       (اختياري)
+      </p>
+      <textarea id="noteinput" rows="2"></textarea>
+     </div>
+     <div class="col-md-12" id="summary">
+      <label class="mb-3" name="items" style="font-size: 110%;">
+       <strong>
+        المنتجات:
+       </strong>
+      </label>
+      <br/>
+      <label class="mb-3" id="items-list">
+       <ul>
+        <li>
+         منتج
+        </li>
+       </ul>
+      </label>
+     </div>
+     <div class="item" id="price">
+      <p id="total" style="font-size: 110%;">
+       <strong>
+        السعر الإجمالي:
+       </strong>
+       20 ريال
+      </p>
+      <small>
+       السعر يشمل تكاليف الشحن والضرائب
+      </small>
+      <br/>
+     </div>
+     <div class="btn-block">
+      <button type="submit">
+       إرسال
+      </button>
+     </div>
+     <br/>
+     <div style="align-content: center; align-items: center; align-self: center; text-align: center; justify-content: center;">
+      <span id="submitted" style="align-content: center; align-items: center; align-self: center; color: rgb(10, 132, 91);">
+      </span>
+     </div>
+    </br>
+   </form>
+  </div>
+ </body>
+ <script>
+  window.onload = function() {
+    calculateTotal();
+    var inputs = document.querySelectorAll('input[type="checkbox"], select');
+    for(var i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener('change', calculateTotal);
+    }
+  }
+  function displayElements() {
+    var selector = 'div[style="display: none;"]:has(>[name="checklist"])';
+    var elements = document.querySelectorAll(selector);
+
+    // Display the first three matching elements
+    for (let i = 0; i < 2 && i < elements.length; i++) {
+        elements[i].style.display = 'block';
+    }
+    elements = document.querySelectorAll(selector);
+    if (elements.length==0){document.querySelector('[onclick="displayElements()"]').style.display="none"}
+    
+}
+
+// Call the function to display the elements
+displayElements();
+
+  function calculateTotal() {
+    var mainPrice = parseFloat(document.querySelector('.itemx').getAttribute('data-price'));
+    var shipping = parseFloat(document.querySelector('.itemx').getAttribute('data-shipping'));;
+    var quantity = document.querySelector('select').value;
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    var total = 0;
+    var suggestedSelected = false;
+    var totalitems={};
+    totalitems[document.querySelector('h2').textContent]=quantity
+    for(var i = 0; i < checkboxes.length; i++) {
+      if(checkboxes[i].checked) {
+        var suggestedPrice = parseFloat(checkboxes[i].nextElementSibling.getAttribute('data-price'));
+        var indexs=String(parseInt(checkboxes[i].getAttribute('id').replace('check_','')))
+        var suggestedQuantity = document.querySelector('#quantity' + indexs).value;
+        total += suggestedPrice * suggestedQuantity;
+        suggestedSelected = true;
+        totalitems[checkboxes[i].nextElementSibling.textContent]=suggestedQuantity;
+      }
+    }
+  
+    total += mainPrice * quantity;
+  
+    if(suggestedSelected) {
+      total *= 0.9;
+    }
+    total += shipping;
+    var itemslist=document.querySelector('#items-list')
+    var ele='<li>name | الكمية: quantity</li>'
+    var text=''
+    for(item of Object.keys(totalitems)){text+=ele.replace('name',item.split('-')[0]).replace('quantity',totalitems[item])}
+    itemslist.innerHTML =text
+    document.querySelector('#total').innerHTML = '<strong >السعر الإجمالي: &nbsp;</strong>'  + String(total.toFixed(2)).split('.')[0] + ' ريال';
+    
+  }
+  document.querySelector('form').addEventListener('submit', function(event) {
+    // Prevent form from submitting normally
+    event.preventDefault();
+
+    // Get form elements
+    var nameInput = document.querySelector('#nameinput');
+    var emailInput = document.querySelector('#emailinput');
+    var messageInput = document.querySelector('#noteinput');
+    var phone= document.querySelector('#phoneinput');
+    var address= document.querySelector('#addressinput');
+    var city= document.querySelector('#cityinput');
+    var summary= document.querySelector('#summary');
+    var price= document.querySelector('125');
+
+    // Create a new FormData object
+    var formData = {
+        'entry.2005620554': nameInput.value,
+        'entry.1045781291': emailInput.value,
+        'entry.1065046570': address.value,
+        'entry.741965832': city.value,
+        'entry.1166974658': phone.value,
+        'entry.839337160': messageInput.value,
+        'entry.1255906723': price.textContent,
+        'entry.1480033667': summary.textContent
+    };
+
+    // Create a new script element
+    if(navigator.onLine){
+    var script = document.createElement('script');
+    script.src = 'https://docs.google.com/forms/d/e/1FAIpQLSc17fzrdrDeTjewvzOGBaR-YcJ2038p1yAXV1SR1_2LV40xKA/formResponse?callback=callbackFunction&' + 
+        Object.keys(formData).map(function(key) {
+            return key + '=' + encodeURIComponent(formData[key]);
+        }).join('&');
+    document.body.appendChild(script);
+    loadScript("js/callbackFunction.js")}
+});
+
+// Define the callback function
+function loadScript(url) {
+    var script = document.createElement('script');
+    script.src = url;
+    document.body.appendChild(script);
+}
+// Define the callback function
+function callbackFunction() {
+    console.log('Form submitted successfully!');
+    
+
+    // Display a "Comment submitted" message above the form
+    var message=document.querySelector("#submitted")
+    message.textContent = 'تم الإرسال بنجاح! سيتم التواصل معكم هاتفيا لتأكيد الطلب. شكرا لكم';
+
+    // Scroll to the message
+    message.scrollIntoView({ behavior: 'smooth' });
+}
+ </script>
+</html>
